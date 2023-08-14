@@ -1,0 +1,17 @@
+Web VPython 3.2
+
+def calculaY(posx,r):
+    return sqrt(pow(10,2)
+    -pow(posx-10,2))+10
+    
+planeta=sphere(pos=vector(10,10,0),
+radius=5,color=vector(0,0,255))
+lua=sphere(pos=vector(10,0,0),
+radius=1,color=vector(128,128,128))
+
+for i in range(20):
+    rate(1)
+    coordy=calculaY(i,10)
+    coordx=i
+    lua.pos.x=coordx
+    lua.pos.y=coordy
