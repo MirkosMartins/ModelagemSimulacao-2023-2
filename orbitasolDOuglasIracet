@@ -1,0 +1,37 @@
+Web VPython 3.2
+
+from vpython import *
+
+def calculaPosicaoAngulo(angulo, raio):
+    radianos = radians(angulo)
+    x = raio * cos(radianos)
+    y = raio * sin(radianos)
+    return vector(x, y, 0)
+
+scene = canvas(width=800, height=600)
+
+sol = sphere(pos=vector(0, 0, 0), radius=20, color=vector(255, 255, 0))
+planeta = sphere(pos=vector(30, 0, 0), radius=5, color=vector(0, 0, 255))
+lua = sphere(pos=vector(37, 0, 0), radius=1, color=vector(128, 128, 128))
+
+angulo_planeta = 0
+angulo_lua = 0
+velocidade_planeta = 1
+velocidade_lua = 5
+
+def atualizaPlanetaELua():
+    global angulo_planeta, angulo_lua
+    angulo_planeta += velocidade_planeta
+    angulo_lua += velocidade_lua
+
+    if angulo_planeta >= 360:
+        angulo_planeta = 0
+    if angulo_lua >= 360:
+        angulo_lua = 0
+
+    planeta.pos = calculaPosicaoAngulo(angulo_planeta, 30)
+    lua.pos = planeta.pos + calculaPosicaoAngulo(angulo_lua, 7)  
+
+while True:
+    rate(60)
+    atualizaPlanetaELua()
