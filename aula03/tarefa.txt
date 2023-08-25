@@ -1,0 +1,3 @@
+Fazer um sistema que envolva 3 corpos (sol, planeta, lua).
+O planeta precisa orbitar o sol (movimento circular)
+A lua precisa orbitar o planeta (movimento circular)
