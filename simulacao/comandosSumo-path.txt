@@ -1,0 +1,12 @@
+path-files = "C:\Users\mirko\Downloads\Modelagem e Simulacao\"
+path-sumo = "C:\program Files(x86)\Eclipse\SUMO"
+
+netconvert --osm-files "cj1.osm" 
+--output-file 'cj1.net.xml'
+
+--geometry.remove --roundabouts.guess --ramps.guess 
+--junctions.join --tls.guess-signals --tls.discard-simple --tls.join
+
+python .\randomTrips.py -n 'cj1.net.xml' -e 1000 -o 'cj1.trips.xml'
+
+.\duarouter.exe -n 'cj1.net.xml' --route-files 'cj1.rou.xml'
