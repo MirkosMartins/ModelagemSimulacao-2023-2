@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-10-23 10:22:41.703000 by randomTrips.py v1_14_1+0000-f654d7b963e
+<configuration>
+    <end value="1000"/>
+    <net-file value="C:\Users\mirko\OneDrive\Documentos\2023\2 semestre\Modelagem e Simulacao\SUMO\SHOPPING\royal.net.xml"/>
+    <output-trip-file value="C:\Users\mirko\OneDrive\Documentos\2023\2 semestre\Modelagem e Simulacao\SUMO\SHOPPING\royal.trips.xml"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+<trip id="GERADO (SEQUENCIAL)" depart="tempo_GERADO" from="VIA_VALIDA" to="VIA_VALIDA"/>
+</routes>
