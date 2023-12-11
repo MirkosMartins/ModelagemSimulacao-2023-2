@@ -1,0 +1,2 @@
+Colocar 3 atendentes
+  Mostrar tempo total de atendimento
